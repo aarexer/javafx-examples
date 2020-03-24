@@ -1,3 +1,4 @@
 include 'fx-samples'
 include 'form-login-fxml'
+include 'calculator-fxml'
 
