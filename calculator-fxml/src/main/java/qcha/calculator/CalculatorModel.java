@@ -1,8 +1,8 @@
-package qcha.calculator.controller;
+package qcha.calculator;
 
-public class CalculatorModel {
+public final class CalculatorModel {
 
-    public Number calculate(long number1, long number2, String operator) {
+    public final Number calculate(final long number1, final long number2, final String operator) {
         switch (operator) {
             case "+":
                 return number1 + number2;

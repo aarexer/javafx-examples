@@ -3,8 +3,8 @@ package qcha.calculator.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
+import qcha.calculator.CalculatorModel;
 
 public final class CalculatorController {
     @FXML
@@ -17,7 +17,7 @@ public final class CalculatorController {
     private String operator = "";
     private boolean isNewCalculation = false;
 
-    private CalculatorModel calculatorModel = new CalculatorModel();
+    private final CalculatorModel calculatorModel = new CalculatorModel();
 
     @FXML
     private void processNumpad(final ActionEvent event) {
@@ -27,7 +27,7 @@ public final class CalculatorController {
             isNewCalculation = false;
         }
 
-        String number = ((Button) event.getSource()).getText();
+        final String number = ((Button) event.getSource()).getText();
         output.setText(output.getText() + number);
     }
 
