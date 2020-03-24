@@ -1,4 +1,6 @@
 include 'fx-samples'
 include 'form-login-fxml'
 include 'calculator-fxml'
+include 'tic-tac-toe'
+include 'editor-fxml'
 

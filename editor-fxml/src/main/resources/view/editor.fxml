@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/8.0.65"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="qcha.editor.controller.EditorController">
+
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <Menu text="File">
+                <MenuItem text="New" onAction="#onNew" accelerator="CTRL+N"/>
+                <MenuItem text="Save" onAction="#onSave" accelerator="CTRL+S"/>
+                <MenuItem text="Load" onAction="#onLoad" accelerator="CTRL+O"/>
+                <MenuItem text="Close" onAction="#onClose" accelerator="CTRL+Q"/>
+            </Menu>
+
+            <Menu text="Help">
+                <MenuItem text="About" onAction="#onAbout"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <TextArea fx:id="areaText" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER"/>
+    </center>
+</BorderPane>
