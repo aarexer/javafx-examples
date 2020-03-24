@@ -41,6 +41,12 @@ public final class CalculatorController {
             }
 
             operator = value;
+
+            // repeated sign pressing
+            if (output.getText().isEmpty()) {
+                return;
+            }
+
             leftOperand = Long.parseLong(output.getText());
             hint.setText(output.getText() + " " + operator);
             output.setText("");
