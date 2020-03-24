@@ -1,4 +1,4 @@
-package qcha.examples.loader;
+package qcha.examples.progressbar;
 
 import javafx.concurrent.Task;
 
