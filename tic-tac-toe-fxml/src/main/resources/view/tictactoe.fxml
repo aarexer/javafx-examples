@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="657.0" prefWidth="599.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="qcha.controller.TicTacToeController">
+    <top>
+        <MenuBar>
+            <Menu text="Game">
+                <MenuItem accelerator="CTRL+N" onAction="#onNew" text="New" />
+                <MenuItem accelerator="CTRL+Q" onAction="#onClose" text="Exit" />
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <GridPane fx:id="board">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" onMouseClicked="#handleMouseClicked" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" onMouseClicked="#handleMouseClicked" stroke="BLACK" strokeType="INSIDE" width="200.0" GridPane.columnIndex="1" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" onMouseClicked="#handleMouseClicked" stroke="BLACK" strokeType="INSIDE" width="200.0" GridPane.columnIndex="2" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" onMouseClicked="#handleMouseClicked" stroke="BLACK" strokeType="INSIDE" width="200.0" GridPane.rowIndex="1" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" onMouseClicked="#handleMouseClicked" stroke="BLACK" strokeType="INSIDE" width="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" onMouseClicked="#handleMouseClicked" stroke="BLACK" strokeType="INSIDE" width="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" onMouseClicked="#handleMouseClicked" stroke="BLACK" strokeType="INSIDE" width="200.0" GridPane.rowIndex="2" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" onMouseClicked="#handleMouseClicked" stroke="BLACK" strokeType="INSIDE" width="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" onMouseClicked="#handleMouseClicked" stroke="BLACK" strokeType="INSIDE" width="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+    </center>
+
+    <bottom>
+        <HBox spacing="10">
+            <Label text="Player Turn:">
+                <font><Font size="21.0" /></font>
+            </Label>
+            <Label fx:id="currentPlayerLabel" text="COVID-19">
+                <font><Font size="21.0" /></font>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            </Label>
+         <opaqueInsets>
+            <Insets right="5.0" />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+        </HBox>
+    </bottom>
+</BorderPane>
