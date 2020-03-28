@@ -23,21 +23,13 @@ public final class TicTacToeController {
     private TicTacToeModel model = new TicTacToeModel();
 
     // Menu Bar actions
-    public void onNew(ActionEvent actionEvent) {
+    public void onNew() {
         board.getChildren().forEach(tile -> ((Rectangle) tile).setFill(Color.WHITE));
         model.reset();
     }
 
-    public void onClose(ActionEvent actionEvent) {
+    public void onClose() {
         model.exit();
-    }
-
-    public void onAbout(ActionEvent actionEvent) {
-
-    }
-
-    public void onStatistic(ActionEvent actionEvent) {
-
     }
 
     public void handleMouseClicked(MouseEvent mouseEvent) throws IOException {
