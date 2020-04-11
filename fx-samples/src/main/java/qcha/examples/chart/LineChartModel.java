@@ -13,7 +13,7 @@ public class LineChartModel {
         final List<String> lines = FileUtils.readAll(file);
         return lines.stream().map(line -> {
             String[] splitted = line.trim().split(",");
-            return new Pair<>(Integer.valueOf(splitted[0].trim()), Integer.valueOf(splitted[1].trim()));
+            return new Pair<>(Double.valueOf(splitted[0].trim()), Double.valueOf(splitted[1].trim()));
         }).collect(Collectors.toList());
     }
 }

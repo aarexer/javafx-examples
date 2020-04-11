@@ -34,6 +34,7 @@ public class LineChartView extends BorderPane {
             if (file != null) {
                 try {
                     XYChart.Series<Number, Number> series = new XYChart.Series<>();
+                    series.setName("Data from " + file.getName());
                     ObservableList<XYChart.Data<Number, Number>> data = controller.receivePoints(file);
                     series.getData().addAll(data);
 
@@ -63,7 +64,6 @@ public class LineChartView extends BorderPane {
         final NumberAxis xAxis = new NumberAxis();
         final NumberAxis yAxis = new NumberAxis();
         lineChart = new LineChart<>(xAxis, yAxis);
-
         setCenter(lineChart);
 
         initControlPanel();
